@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 abstract class GDSCColors {
 
+  static const Color white = Colors.white;
+  static const Color black = Colors.black;
+
   static const Color blue100 = Color(0xFFECF3FE);
   static const Color blue200 = Color(0xFFD9E7FD);
   static const Color blue300 = Color(0xFFB3CEFB);
