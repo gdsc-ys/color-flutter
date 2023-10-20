@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-abstract class GDSCColors {
+abstract class GDSCPalette {
 
-  static const Color white = Colors.white;
-  static const Color black = Colors.black;
+  static const Color white = Colors.white; // Color(0xFFFFFFFF);
+  static const Color black = Colors.black; // Color(0xFF000000);
 
   static const Color blue100 = Color(0xFFECF3FE);
   static const Color blue200 = Color(0xFFD9E7FD);
