@@ -1,3 +1,3 @@
 library gdsc_ys_color;
 
-export 'src/palette.style.dart';
+export 'src/palette.style.dart' show GDSCPalette;
