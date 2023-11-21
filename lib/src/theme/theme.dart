@@ -12,25 +12,29 @@ class GDSCTheme {
   SemanticColors get colors =>
       _semanticColors.getColor();
 
-  set theme(GDSCColorTheme theme) {
+  set current(GDSCColorTheme theme) {
     currentTheme = theme;
     _semanticColors = GDSCSemanticColors(currentTheme: currentTheme);
   }
 
   static final ThemeData blue = ThemeData(
     colorScheme: GDSCColorScheme.blue,
+    primaryColor: GDSCColorScheme.blue.primary,
   );
 
   static final ThemeData green = ThemeData(
     colorScheme: GDSCColorScheme.green,
+    primaryColor: GDSCColorScheme.green.primary,
   );
 
   static final ThemeData yellow = ThemeData(
     colorScheme: GDSCColorScheme.yellow,
+    primaryColor: GDSCColorScheme.yellow.primary,
   );
 
   static final ThemeData red = ThemeData(
     colorScheme: GDSCColorScheme.red,
+    primaryColor: GDSCColorScheme.red.primary,
   );
 
   ThemeData getTheme() {
