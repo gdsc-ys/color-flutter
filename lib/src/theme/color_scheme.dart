@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gdsc_ys_color/gdsc_ys_color.dart';
 
+/// Predefined color schemes for GDSC-ys-colors
 class GDSCColorScheme {
   static ColorScheme blue = const ColorScheme.light(
     primary: GDSCPalette.blue500,
