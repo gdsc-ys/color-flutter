@@ -2,23 +2,23 @@ import 'dart:ui';
 
 import 'package:gdsc_ys_color/gdsc_ys_color.dart';
 
-class _SemanticLineTheme {
+class SemanticLineColors {
   final Color primary;
   final Color secondary;
 
-  const _SemanticLineTheme({
+  const SemanticLineColors({
     required this.primary,
     required this.secondary,
   });
 }
 
-class GDSCLineTheme {
-  static const blue = _SemanticLineTheme(
+class GDSCLineColors {
+  static const blue = SemanticLineColors(
       primary: GDSCPalette.coolGray400, secondary: GDSCPalette.coolGray800);
-  static const green = _SemanticLineTheme(
+  static const green = SemanticLineColors(
       primary: GDSCPalette.coolGray500, secondary: GDSCPalette.coolGray800);
-  static const yellow = _SemanticLineTheme(
+  static const yellow = SemanticLineColors(
       primary: GDSCPalette.warmGray400, secondary: GDSCPalette.warmGray800);
-  static const red = _SemanticLineTheme(
+  static const red = SemanticLineColors(
       primary: GDSCPalette.warmGray400, secondary: GDSCPalette.warmGray800);
 }

@@ -8,99 +8,77 @@ import 'tab_bar.dart';
 import 'tag.dart';
 import 'text_button.dart';
 
-class GDSCSemanticColor {
+class SemanticColors {
+  final SemanticBackgroundColors background;
+  final SemanticBorderColors border;
+  final SemanticButtonColors button;
+  final SemanticLineColors line;
+  final SemanticTabBarColors tabBar;
+  final SemanticTagColors tag;
+  final SemanticTextButtonColors textButton;
+
+  const SemanticColors({
+    required this.background,
+    required this.border,
+    required this.button,
+    required this.line,
+    required this.tabBar,
+    required this.tag,
+    required this.textButton,
+  });
+}
+
+class GDSCSemanticColors {
   final GDSCColorTheme currentTheme;
 
-  const GDSCSemanticColor({required this.currentTheme});
+  const GDSCSemanticColors({required this.currentTheme});
 
-  get background {
+  SemanticColors getColor() {
     switch (currentTheme) {
       case GDSCColorTheme.blue:
-        return GDSCBackgroundTheme.blue;
+        return blue;
       case GDSCColorTheme.green:
-        return GDSCBackgroundTheme.green;
+        return green;
       case GDSCColorTheme.yellow:
-        return GDSCBackgroundTheme.yellow;
+        return yellow;
       case GDSCColorTheme.red:
-        return GDSCBackgroundTheme.red;
+        return red;
     }
   }
 
-  get border {
-    switch (currentTheme) {
-      case GDSCColorTheme.blue:
-        return GDSCBorderTheme.blue;
-      case GDSCColorTheme.green:
-        return GDSCBorderTheme.green;
-      case GDSCColorTheme.yellow:
-        return GDSCBorderTheme.yellow;
-      case GDSCColorTheme.red:
-        return GDSCBorderTheme.red;
-    }
-  }
+  static final SemanticColors blue = SemanticColors(
+      background: GDSCBackgroundColors.blue,
+      border: GDSCBorderColors.blue,
+      button: GDSCButtonColors.blue,
+      line: GDSCLineColors.blue,
+      tabBar: GDSCTabBarColors.blue,
+      tag: GDSCTagColors.blue,
+      textButton: GDSCTextButtonColors.blue);
 
-  get button {
-    switch (currentTheme) {
-      case GDSCColorTheme.blue:
-        return GDSCButtonTheme.blue;
-      case GDSCColorTheme.green:
-        return GDSCButtonTheme.green;
-      case GDSCColorTheme.yellow:
-        return GDSCButtonTheme.yellow;
-      case GDSCColorTheme.red:
-        return GDSCButtonTheme.red;
-    }
-  }
+  static final SemanticColors green = SemanticColors(
+      background: GDSCBackgroundColors.green,
+      border: GDSCBorderColors.green,
+      button: GDSCButtonColors.green,
+      line: GDSCLineColors.green,
+      tabBar: GDSCTabBarColors.green,
+      tag: GDSCTagColors.green,
+      textButton: GDSCTextButtonColors.green);
 
-  get line {
-    switch (currentTheme) {
-      case GDSCColorTheme.blue:
-        return GDSCLineTheme.blue;
-      case GDSCColorTheme.green:
-        return GDSCLineTheme.green;
-      case GDSCColorTheme.yellow:
-        return GDSCLineTheme.yellow;
-      case GDSCColorTheme.red:
-        return GDSCLineTheme.red;
-    }
-  }
+  static final SemanticColors yellow = SemanticColors(
+      background: GDSCBackgroundColors.yellow,
+      border: GDSCBorderColors.yellow,
+      button: GDSCButtonColors.yellow,
+      line: GDSCLineColors.yellow,
+      tabBar: GDSCTabBarColors.yellow,
+      tag: GDSCTagColors.yellow,
+      textButton: GDSCTextButtonColors.yellow);
 
-  get tabBar {
-    switch (currentTheme) {
-      case GDSCColorTheme.blue:
-        return GDSCTabBarTheme.blue;
-      case GDSCColorTheme.green:
-        return GDSCTabBarTheme.green;
-      case GDSCColorTheme.yellow:
-        return GDSCTabBarTheme.yellow;
-      case GDSCColorTheme.red:
-        return GDSCTabBarTheme.red;
-    }
-  }
-
-  get tag {
-    switch (currentTheme) {
-      case GDSCColorTheme.blue:
-        return GDSCTagTheme.blue;
-      case GDSCColorTheme.green:
-        return GDSCTagTheme.green;
-      case GDSCColorTheme.yellow:
-        return GDSCTagTheme.yellow;
-      case GDSCColorTheme.red:
-        return GDSCTagTheme.red;
-    }
-  }
-
-  get textButton {
-    switch (currentTheme) {
-      case GDSCColorTheme.blue:
-        return GDSCTextButtonTheme.blue;
-      case GDSCColorTheme.green:
-        return GDSCTextButtonTheme.green;
-      case GDSCColorTheme.yellow:
-        return GDSCTextButtonTheme.yellow;
-      case GDSCColorTheme.red:
-        return GDSCTextButtonTheme.red;
-    }
-  }
+  static final SemanticColors red = SemanticColors(
+      background: GDSCBackgroundColors.red,
+      border: GDSCBorderColors.red,
+      button: GDSCButtonColors.red,
+      line: GDSCLineColors.red,
+      tabBar: GDSCTabBarColors.red,
+      tag: GDSCTagColors.red,
+      textButton: GDSCTextButtonColors.red);
 }

@@ -11,27 +11,32 @@ void main() {
 }
 
 class OpacitySliderExample extends StatefulWidget {
+
   @override
   _OpacitySliderExampleState createState() => _OpacitySliderExampleState();
 }
 
 class _OpacitySliderExampleState extends State<OpacitySliderExample> {
   double _opacity = 0.5;
+  GDSCTheme theme = GDSCTheme(
+    currentTheme: GDSCColorTheme.yellow,
+  );
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: theme.getTheme(),
       home: Scaffold(
         body: Center(
           child: Container(
-            color: GDSCPalette.blue500.withOpacity(_opacity),
+            color: theme.getTheme().primaryColor.withOpacity(_opacity),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   "Opacity: ${(_opacity * 100).round()}%",
                   style: TextStyle(
-                    color: GDSCPalette.black,
+                    color: theme.colors.background.primary.solid,
                   ),
                 ),
                 Slider(
@@ -41,8 +46,45 @@ class _OpacitySliderExampleState extends State<OpacitySliderExample> {
                       _opacity = value;
                     });
                   },
-                  activeColor: GDSCPalette.yellow500,
+                  // activeColor: theme.getTheme().primaryColor,
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          theme.theme = GDSCColorTheme.blue;
+                        });
+                      },
+                      child: const Text("Blue"),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          theme.theme = GDSCColorTheme.green;
+                        });
+                      },
+                      child: const Text("Green"),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          theme.theme = GDSCColorTheme.yellow;
+                        });
+                      },
+                      child: const Text("Yellow"),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          theme.theme = GDSCColorTheme.red;
+                        });
+                      },
+                      child: const Text("Red"),
+                    ),
+                  ],
+                )
               ],
             ),
           ),

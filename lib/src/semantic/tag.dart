@@ -2,123 +2,123 @@ import 'dart:ui';
 
 import 'package:gdsc_ys_color/gdsc_ys_color.dart';
 
-class _TagBackgroundTheme {
+class TagBackgroundColors {
   final Color common;
   final Color disabled;
 
-  const _TagBackgroundTheme({
+  const TagBackgroundColors({
     required this.common,
     required this.disabled,
   });
 }
 
-class _TagLabelTheme {
+class TagLabelColors {
   final Color common;
   final Color disabled;
 
-  const _TagLabelTheme({
+  const TagLabelColors({
     required this.common,
     required this.disabled,
   });
 }
 
-class _TagTheme {
-  final _TagBackgroundTheme background;
-  final _TagLabelTheme label;
+class TagColors {
+  final TagBackgroundColors background;
+  final TagLabelColors label;
 
-  const _TagTheme({
+  const TagColors({
     required this.background,
     required this.label,
   });
 }
 
-class _SemanticTagTheme {
-  final _TagTheme primary;
-  final _TagTheme secondary;
-  final _TagTheme tertiary;
+class SemanticTagColors {
+  final TagColors primary;
+  final TagColors secondary;
+  final TagColors tertiary;
 
-  const _SemanticTagTheme({
+  const SemanticTagColors({
     required this.primary,
     required this.secondary,
     required this.tertiary,
   });
 }
 
-class GDSCTagTheme {
-  static const blue = _SemanticTagTheme(
-      primary: _TagTheme(
-          background: _TagBackgroundTheme(
+class GDSCTagColors {
+  static const blue = SemanticTagColors(
+      primary: TagColors(
+          background: TagBackgroundColors(
               common: GDSCPalette.blue500, disabled: GDSCPalette.coolGray200),
-          label: _TagLabelTheme(
+          label: TagLabelColors(
               common: GDSCPalette.white, disabled: GDSCPalette.coolGray400)),
-      secondary: _TagTheme(
-          background: _TagBackgroundTheme(
+      secondary: TagColors(
+          background: TagBackgroundColors(
               common: GDSCPalette.blue300, disabled: GDSCPalette.coolGray200),
-          label: _TagLabelTheme(
+          label: TagLabelColors(
               common: GDSCPalette.blue900, disabled: GDSCPalette.coolGray400)),
-      tertiary: _TagTheme(
-          background: _TagBackgroundTheme(
+      tertiary: TagColors(
+          background: TagBackgroundColors(
               common: GDSCPalette.coolGray200,
               disabled: GDSCPalette.coolGray200),
-          label: _TagLabelTheme(
+          label: TagLabelColors(
               common: GDSCPalette.coolGray700,
               disabled: GDSCPalette.coolGray400)));
 
-  static const green = _SemanticTagTheme(
-      primary: _TagTheme(
-          background: _TagBackgroundTheme(
+  static const green = SemanticTagColors(
+      primary: TagColors(
+          background: TagBackgroundColors(
               common: GDSCPalette.green500, disabled: GDSCPalette.coolGray200),
-          label: _TagLabelTheme(
+          label: TagLabelColors(
               common: GDSCPalette.white, disabled: GDSCPalette.coolGray400)),
-      secondary: _TagTheme(
-          background: _TagBackgroundTheme(
+      secondary: TagColors(
+          background: TagBackgroundColors(
               common: GDSCPalette.green300, disabled: GDSCPalette.coolGray200),
-          label: _TagLabelTheme(
+          label: TagLabelColors(
               common: GDSCPalette.green900, disabled: GDSCPalette.coolGray400)),
-      tertiary: _TagTheme(
-          background: _TagBackgroundTheme(
+      tertiary: TagColors(
+          background: TagBackgroundColors(
               common: GDSCPalette.coolGray200,
               disabled: GDSCPalette.coolGray200),
-          label: _TagLabelTheme(
+          label: TagLabelColors(
               common: GDSCPalette.coolGray700,
               disabled: GDSCPalette.coolGray400)));
 
-  static const yellow = _SemanticTagTheme(
-      primary: _TagTheme(
-          background: _TagBackgroundTheme(
+  static const yellow = SemanticTagColors(
+      primary: TagColors(
+          background: TagBackgroundColors(
               common: GDSCPalette.yellow800, disabled: GDSCPalette.warmGray200),
-          label: _TagLabelTheme(
+          label: TagLabelColors(
               common: GDSCPalette.white, disabled: GDSCPalette.warmGray400)),
-      secondary: _TagTheme(
-          background: _TagBackgroundTheme(
+      secondary: TagColors(
+          background: TagBackgroundColors(
               common: GDSCPalette.yellow300, disabled: GDSCPalette.warmGray200),
-          label: _TagLabelTheme(
+          label: TagLabelColors(
               common: GDSCPalette.yellow1000,
               disabled: GDSCPalette.warmGray400)),
-      tertiary: _TagTheme(
-          background: _TagBackgroundTheme(
+      tertiary: TagColors(
+          background: TagBackgroundColors(
               common: GDSCPalette.warmGray200,
               disabled: GDSCPalette.warmGray200),
-          label: _TagLabelTheme(
+          label: TagLabelColors(
               common: GDSCPalette.warmGray700,
               disabled: GDSCPalette.warmGray400)));
 
-  static const red = _SemanticTagTheme(
-      primary: _TagTheme(
-          background: _TagBackgroundTheme(
+  static const red = SemanticTagColors(
+      primary: TagColors(
+          background: TagBackgroundColors(
               common: GDSCPalette.red600, disabled: GDSCPalette.warmGray200),
-          label: _TagLabelTheme(
+          label: TagLabelColors(
               common: GDSCPalette.white, disabled: GDSCPalette.warmGray400)),
-      secondary: _TagTheme(
-          background: _TagBackgroundTheme(
+      secondary: TagColors(
+          background: TagBackgroundColors(
               common: GDSCPalette.red300, disabled: GDSCPalette.warmGray200),
-          label: _TagLabelTheme(
+          label: TagLabelColors(
               common: GDSCPalette.red900, disabled: GDSCPalette.warmGray400)),
-      tertiary: _TagTheme(
-          background: _TagBackgroundTheme(
+      tertiary: TagColors(
+          background: TagBackgroundColors(
               common: GDSCPalette.warmGray200,
               disabled: GDSCPalette.warmGray200),
-          label: _TagLabelTheme(
+          label: TagLabelColors(
               common: GDSCPalette.warmGray700,
               disabled: GDSCPalette.warmGray400)));
 }
