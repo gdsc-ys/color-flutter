@@ -53,7 +53,7 @@ class GDSCTheme {
     }
   }
 
-  GDSCTheme({GDSCColorTheme currentTheme = GDSCColorTheme.blue}) : _currentTheme = currentTheme {
+  GDSCTheme({required GDSCColorTheme currentTheme}) : _currentTheme = currentTheme {
     _colors = GDSCSemanticColors(currentTheme: _currentTheme).colors;
   }
 }
