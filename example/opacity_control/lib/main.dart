@@ -54,7 +54,7 @@ class _OpacitySliderExampleState extends State<OpacitySliderExample> {
                     ElevatedButton(
                       onPressed: () {
                         setState(() {
-                          theme.theme = GDSCColorTheme.blue;
+                          theme.current = GDSCColorTheme.blue;
                         });
                       },
                       child: const Text("Blue"),
@@ -62,7 +62,7 @@ class _OpacitySliderExampleState extends State<OpacitySliderExample> {
                     ElevatedButton(
                       onPressed: () {
                         setState(() {
-                          theme.theme = GDSCColorTheme.green;
+                          theme.current = GDSCColorTheme.green;
                         });
                       },
                       child: const Text("Green"),
@@ -70,7 +70,7 @@ class _OpacitySliderExampleState extends State<OpacitySliderExample> {
                     ElevatedButton(
                       onPressed: () {
                         setState(() {
-                          theme.theme = GDSCColorTheme.yellow;
+                          theme.current = GDSCColorTheme.yellow;
                         });
                       },
                       child: const Text("Yellow"),
@@ -78,7 +78,7 @@ class _OpacitySliderExampleState extends State<OpacitySliderExample> {
                     ElevatedButton(
                       onPressed: () {
                         setState(() {
-                          theme.theme = GDSCColorTheme.red;
+                          theme.current = GDSCColorTheme.red;
                         });
                       },
                       child: const Text("Red"),
