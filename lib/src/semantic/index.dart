@@ -30,21 +30,9 @@ class SemanticColors {
 
 class GDSCSemanticColors {
   final GDSCColorTheme currentTheme;
+  late SemanticColors currentColors;
 
-  const GDSCSemanticColors({required this.currentTheme});
-
-  SemanticColors getColor() {
-    switch (currentTheme) {
-      case GDSCColorTheme.blue:
-        return blue;
-      case GDSCColorTheme.green:
-        return green;
-      case GDSCColorTheme.yellow:
-        return yellow;
-      case GDSCColorTheme.red:
-        return red;
-    }
-  }
+  get colors => currentColors;
 
   static final SemanticColors blue = SemanticColors(
       background: GDSCBackgroundColors.blue,
@@ -81,4 +69,21 @@ class GDSCSemanticColors {
       tabBar: GDSCTabBarColors.red,
       tag: GDSCTagColors.red,
       textButton: GDSCTextButtonColors.red);
+
+  GDSCSemanticColors({required this.currentTheme}) {
+    switch(currentTheme) {
+      case GDSCColorTheme.blue:
+        currentColors = blue;
+        break;
+      case GDSCColorTheme.green:
+        currentColors = green;
+        break;
+      case GDSCColorTheme.yellow:
+        currentColors = yellow;
+        break;
+      case GDSCColorTheme.red:
+        currentColors = red;
+        break;
+    }
+  }
 }
