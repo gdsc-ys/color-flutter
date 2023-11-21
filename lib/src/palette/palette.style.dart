@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class GDSCPalette {
-
+class GDSCPalette {
   static const Color white = Colors.white; // Color(0xFFFFFFFF);
   static const Color black = Colors.black; // Color(0xFF000000);
 
@@ -47,7 +46,7 @@ abstract class GDSCPalette {
   static const Color green700 = Color(0xFF2A8642);
   static const Color green800 = Color(0xFF1F6532);
   static const Color green900 = Color(0xFF154321);
-  static const Color green1000 =  Color(0xFF0A2211);
+  static const Color green1000 = Color(0xFF0A2211);
 
   static const Color orange100 = Color(0xFFFDF2EA);
   static const Color orange200 = Color(0xFFFCE6D5);
@@ -58,7 +57,7 @@ abstract class GDSCPalette {
   static const Color orange700 = Color(0xFFC06828);
   static const Color orange800 = Color(0xFF914F1E);
   static const Color orange900 = Color(0xFF603414);
-  static const Color orange1000 =  Color(0xFF311B0A);
+  static const Color orange1000 = Color(0xFF311B0A);
 
   static const Color magenta100 = Color(0xFFFDEBF5);
   static const Color magenta200 = Color(0xFFFCD7EC);
@@ -69,7 +68,7 @@ abstract class GDSCPalette {
   static const Color magenta700 = Color(0xFFC03080);
   static const Color magenta800 = Color(0xFF912461);
   static const Color magenta900 = Color(0xFF601840);
-  static const Color magenta1000 =  Color(0xFF310C21);
+  static const Color magenta1000 = Color(0xFF310C21);
 
   static const Color purple100 = Color(0xFFF3ECFE);
   static const Color purple200 = Color(0xFFE8D8FD);
@@ -80,7 +79,7 @@ abstract class GDSCPalette {
   static const Color purple700 = Color(0xFF7035C3);
   static const Color purple800 = Color(0xFF552893);
   static const Color purple900 = Color(0xFF381A62);
-  static const Color purple1000 =  Color(0xFF1D0D32);
+  static const Color purple1000 = Color(0xFF1D0D32);
 
   static const Color cyan100 = Color(0xFFEAFAFD);
   static const Color cyan200 = Color(0xFFD5F6FC);
@@ -91,7 +90,7 @@ abstract class GDSCPalette {
   static const Color cyan700 = Color(0xFF28A8C0);
   static const Color cyan800 = Color(0xFF1E7F91);
   static const Color cyan900 = Color(0xFF145460);
-  static const Color cyan1000 =  Color(0xFF0A2B31);
+  static const Color cyan1000 = Color(0xFF0A2B31);
 
   static const Color warmGray100 = Color(0xFFF0EFEF);
   static const Color warmGray200 = Color(0xFFE0DFDE);
@@ -102,7 +101,7 @@ abstract class GDSCPalette {
   static const Color warmGray700 = Color(0xFF534E4C);
   static const Color warmGray800 = Color(0xFF3F3B39);
   static const Color warmGray900 = Color(0xFF2A2726);
-  static const Color warmGray1000 =  Color(0xFF151413);
+  static const Color warmGray1000 = Color(0xFF151413);
 
   static const Color coolGray100 = Color(0xFFEFEFF0);
   static const Color coolGray200 = Color(0xFFDEDFE0);
@@ -113,5 +112,5 @@ abstract class GDSCPalette {
   static const Color coolGray700 = Color(0xFF4C4F53);
   static const Color coolGray800 = Color(0xFF393C3F);
   static const Color coolGray900 = Color(0xFF26282A);
-  static const Color coolGray1000 =  Color(0xFF131415);
+  static const Color coolGray1000 = Color(0xFF131415);
 }
