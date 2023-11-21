@@ -2,58 +2,58 @@ import 'dart:ui';
 
 import 'package:gdsc_ys_color/gdsc_ys_color.dart';
 
-class _BackgroundTheme {
+class BackgroundColors {
   final Color solid;
   final Color gray;
 
-  const _BackgroundTheme({
+  const BackgroundColors({
     required this.solid,
     required this.gray,
   });
 }
 
-class _SemanticBackgroundTheme {
-  final _BackgroundTheme primary;
-  final _BackgroundTheme secondary;
-  final _BackgroundTheme tertiary;
+class SemanticBackgroundColors {
+  final BackgroundColors primary;
+  final BackgroundColors secondary;
+  final BackgroundColors tertiary;
 
-  const _SemanticBackgroundTheme({
+  const SemanticBackgroundColors({
     required this.primary,
     required this.secondary,
     required this.tertiary,
   });
 }
 
-class GDSCBackgroundTheme {
-  static const blue = _SemanticBackgroundTheme(
+class GDSCBackgroundColors {
+  static const blue = SemanticBackgroundColors(
       primary:
-          _BackgroundTheme(solid: GDSCPalette.white, gray: GDSCPalette.white),
-      secondary: _BackgroundTheme(
+          BackgroundColors(solid: GDSCPalette.white, gray: GDSCPalette.white),
+      secondary: BackgroundColors(
           solid: GDSCPalette.blue100, gray: GDSCPalette.coolGray100),
       tertiary:
-          _BackgroundTheme(solid: GDSCPalette.white, gray: GDSCPalette.white));
+          BackgroundColors(solid: GDSCPalette.white, gray: GDSCPalette.white));
 
-  static const green = _SemanticBackgroundTheme(
+  static const green = SemanticBackgroundColors(
       primary:
-          _BackgroundTheme(solid: GDSCPalette.white, gray: GDSCPalette.white),
-      secondary: _BackgroundTheme(
+          BackgroundColors(solid: GDSCPalette.white, gray: GDSCPalette.white),
+      secondary: BackgroundColors(
           solid: GDSCPalette.green100, gray: GDSCPalette.coolGray100),
       tertiary:
-          _BackgroundTheme(solid: GDSCPalette.white, gray: GDSCPalette.white));
+          BackgroundColors(solid: GDSCPalette.white, gray: GDSCPalette.white));
 
-  static const yellow = _SemanticBackgroundTheme(
+  static const yellow = SemanticBackgroundColors(
       primary:
-          _BackgroundTheme(solid: GDSCPalette.white, gray: GDSCPalette.white),
-      secondary: _BackgroundTheme(
+          BackgroundColors(solid: GDSCPalette.white, gray: GDSCPalette.white),
+      secondary: BackgroundColors(
           solid: GDSCPalette.yellow100, gray: GDSCPalette.warmGray100),
       tertiary:
-          _BackgroundTheme(solid: GDSCPalette.white, gray: GDSCPalette.white));
+          BackgroundColors(solid: GDSCPalette.white, gray: GDSCPalette.white));
 
-  static const red = _SemanticBackgroundTheme(
+  static const red = SemanticBackgroundColors(
       primary:
-          _BackgroundTheme(solid: GDSCPalette.white, gray: GDSCPalette.white),
-      secondary: _BackgroundTheme(
+          BackgroundColors(solid: GDSCPalette.white, gray: GDSCPalette.white),
+      secondary: BackgroundColors(
           solid: GDSCPalette.red100, gray: GDSCPalette.warmGray100),
       tertiary:
-          _BackgroundTheme(solid: GDSCPalette.white, gray: GDSCPalette.white));
+          BackgroundColors(solid: GDSCPalette.white, gray: GDSCPalette.white));
 }
