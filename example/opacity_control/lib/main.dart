@@ -36,7 +36,7 @@ class _OpacitySliderExampleState extends State<OpacitySliderExample> {
                 Text(
                   "Opacity: ${(_opacity * 100).round()}%",
                   style: TextStyle(
-                    color: theme.contentColors.gray.a3,
+                    color: theme.colors.content.gray.a3,
                   ),
                 ),
                 Slider(
