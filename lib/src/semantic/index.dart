@@ -1,5 +1,6 @@
 import 'package:gdsc_ys_color/gdsc_ys_color.dart';
 
+import '../content/index.dart';
 import 'background.dart';
 import 'border.dart';
 import 'button.dart';
@@ -16,8 +17,9 @@ class SemanticColors {
   final SemanticTabBarColors tabBar;
   final SemanticTagColors tag;
   final SemanticTextButtonColors textButton;
+  final GDSCContentColors content = GDSCContentColors();
 
-  const SemanticColors({
+  SemanticColors({
     required this.background,
     required this.border,
     required this.button,
@@ -71,7 +73,7 @@ class GDSCSemanticColors {
       textButton: GDSCTextButtonColors.red);
 
   GDSCSemanticColors({required this.currentTheme}) {
-    switch(currentTheme) {
+    switch (currentTheme) {
       case GDSCColorTheme.blue:
         currentColors = blue;
         break;

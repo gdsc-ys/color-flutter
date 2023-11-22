@@ -1,23 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:gdsc_ys_color/src/semantic/index.dart';
 
-import '../content/index.dart';
 import 'color_scheme.dart';
 import '../enum/index.dart';
 
 class GDSCTheme {
-
   GDSCColorTheme _currentTheme;
-  final _contentColors = GDSCContentColors();
   late SemanticColors _colors;
 
   /// Semantic Colors
   /// returns the semantic colors of the current theme
   SemanticColors get colors => _colors;
-
-  /// Content Colors
-  /// returns the content colors of the current theme
-  GDSCContentColors get contentColors => _contentColors;
 
   /// Changes the current theme
   set current(GDSCColorTheme theme) {
@@ -59,7 +52,8 @@ class GDSCTheme {
     }
   }
 
-  GDSCTheme({required GDSCColorTheme currentTheme}) : _currentTheme = currentTheme {
+  GDSCTheme({required GDSCColorTheme currentTheme})
+      : _currentTheme = currentTheme {
     _colors = GDSCSemanticColors(currentTheme: _currentTheme).colors;
   }
 }
