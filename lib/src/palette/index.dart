@@ -92,6 +92,17 @@ class GDSCPalette {
   static const Color cyan900 = Color(0xFF145460);
   static const Color cyan1000 = Color(0xFF0A2B31);
 
+  static const Color gray100 = Color(0xFFFFFFFF);
+  static const Color gray200 = Color(0xFFEEEEEE);
+  static const Color gray300 = Color(0xFFCCCCCC);
+  static const Color gray400 = Color(0xFFAAAAAA);
+  static const Color gray500 = Color(0xFF929292);
+  static const Color gray600 = Color(0xFF828282);
+  static const Color gray700 = Color(0xFF666666);
+  static const Color gray800 = Color(0xFF444444);
+  static const Color gray900 = Color(0xFF222222);
+  static const Color gray1000 = Color(0xFF000000);
+
   static const Color warmGray100 = Color(0xFFF0EFEF);
   static const Color warmGray200 = Color(0xFFE0DFDE);
   static const Color warmGray300 = Color(0xFFC3C0BF);
