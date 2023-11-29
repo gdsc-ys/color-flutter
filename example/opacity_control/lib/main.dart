@@ -11,6 +11,7 @@ void main() {
 }
 
 class OpacitySliderExample extends StatefulWidget {
+  const OpacitySliderExample({super.key});
 
   @override
   _OpacitySliderExampleState createState() => _OpacitySliderExampleState();
