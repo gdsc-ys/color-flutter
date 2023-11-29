@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeManager = Provider.of<GDSCThemeManager>(context);
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'GDSC Dynamic Theme with Provider',
       theme: themeManager.themeData,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'GDSC Dynamic Theme with Provider'),
     );
   }
 }
