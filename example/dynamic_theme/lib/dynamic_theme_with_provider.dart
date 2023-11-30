@@ -47,6 +47,10 @@ class _MyHomePageState extends State<MyHomePage> {
     Provider.of<GDSCThemeManager>(context, listen: false).setTheme(themeColor);
   }
 
+  void Function() _onPressThemeChanger(GDSCColorTheme colortheme) {
+    return () => _changeTheme(colortheme);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,21 +73,21 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
-                    onPressed: () => _changeTheme(GDSCColorTheme.blue),
+                    onPressed: _onPressThemeChanger(GDSCColorTheme.blue),
                     icon:
                         const Icon(Icons.palette, color: GDSCPalette.blue500)),
                 IconButton(
-                    onPressed: () => _changeTheme(GDSCColorTheme.green),
+                    onPressed: _onPressThemeChanger(GDSCColorTheme.green),
                     icon:
                         const Icon(Icons.palette, color: GDSCPalette.green500)),
                 IconButton(
-                    onPressed: () => _changeTheme(GDSCColorTheme.red),
+                    onPressed: _onPressThemeChanger(GDSCColorTheme.red),
                     icon: const Icon(
                       Icons.palette,
                       color: GDSCPalette.red500,
                     )),
                 IconButton(
-                    onPressed: () => _changeTheme(GDSCColorTheme.yellow),
+                    onPressed: _onPressThemeChanger(GDSCColorTheme.yellow),
                     icon: const Icon(Icons.palette,
                         color: GDSCPalette.yellow800)),
               ],
@@ -95,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 }
