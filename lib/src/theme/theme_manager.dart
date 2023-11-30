@@ -3,15 +3,13 @@ import 'package:flutter/material.dart';
 import '../../gdsc_ys_color.dart';
 
 class GDSCThemeManager extends ChangeNotifier {
-  /// [GDSCThemeManager] constructor
-  /// Select the default color theme
   GDSCThemeManager({
     GDSCColorTheme defaultColor = GDSCColorTheme.blue,
   }) {
     _themeData = _getThemeData(defaultColor);
   }
 
-  ThemeData _themeData = GDSCTheme.green;
+  late ThemeData _themeData;
 
   ThemeData get themeData => _themeData;
 
