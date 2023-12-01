@@ -1,1 +1,1 @@
-enum GDSCColorTheme { red, yellow, green, blue }
+enum GDSCThemeColor { red, yellow, green, blue }

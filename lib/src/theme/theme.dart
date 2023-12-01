@@ -5,7 +5,7 @@ import 'color_scheme.dart';
 import '../enum/index.dart';
 
 class GDSCTheme {
-  GDSCColorTheme _currentTheme;
+  GDSCThemeColor _currentTheme;
   late SemanticColors _colors;
 
   /// Semantic Colors
@@ -13,7 +13,7 @@ class GDSCTheme {
   SemanticColors get colors => _colors;
 
   /// Changes the current theme
-  set current(GDSCColorTheme theme) {
+  set current(GDSCThemeColor theme) {
     _currentTheme = theme;
     _colors = GDSCSemanticColors(currentTheme: _currentTheme).colors;
   }
@@ -39,20 +39,20 @@ class GDSCTheme {
   );
 
   /// Returns the current theme's themeData
-  ThemeData getTheme() {
+  ThemeData getThemeData() {
     switch (_currentTheme) {
-      case GDSCColorTheme.blue:
+      case GDSCThemeColor.blue:
         return blue;
-      case GDSCColorTheme.green:
+      case GDSCThemeColor.green:
         return green;
-      case GDSCColorTheme.yellow:
+      case GDSCThemeColor.yellow:
         return yellow;
-      case GDSCColorTheme.red:
+      case GDSCThemeColor.red:
         return red;
     }
   }
 
-  GDSCTheme({required GDSCColorTheme currentTheme})
+  GDSCTheme({required GDSCThemeColor currentTheme})
       : _currentTheme = currentTheme {
     _colors = GDSCSemanticColors(currentTheme: _currentTheme).colors;
   }
