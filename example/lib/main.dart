@@ -8,14 +8,14 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
-  final GDSCTheme theme = GDSCTheme(currentTheme: GDSCColorTheme.blue);
+  final GDSCTheme theme = GDSCTheme(currentTheme: GDSCThemeColor.blue);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'GDSC Theme Demo',
-      theme: theme.getTheme(),
+      theme: theme.getThemeData(),
       home: const MyHomePage(title: 'GDSC Theme Demo'),
     );
   }
@@ -42,7 +42,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
-  GDSCTheme theme = GDSCTheme(currentTheme: GDSCColorTheme.blue);
+  GDSCTheme theme = GDSCTheme(currentTheme: GDSCThemeColor.blue);
 
   void _incrementCounter() {
     setState(() {
