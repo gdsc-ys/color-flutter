@@ -11,31 +11,18 @@ import '../../gdsc_ys_color.dart';
 /// ** See code in examples/dyanmic_theme/lib/dynamic_theme_with_provider.dart **
 class GDSCThemeManager extends ChangeNotifier {
   GDSCThemeManager({
-    GDSCColorTheme defaultColor = GDSCColorTheme.blue,
+    GDSCThemeColor defaultColor = GDSCThemeColor.blue,
   }) {
-    _themeData = _getThemeData(defaultColor);
+    theme = GDSCTheme(currentTheme: defaultColor);
   }
 
-  late ThemeData _themeData;
+  late GDSCTheme theme;
 
-  ThemeData get themeData => _themeData;
-
-  ThemeData _getThemeData(GDSCColorTheme color) {
-    switch (color) {
-      case GDSCColorTheme.red:
-        return GDSCTheme.red;
-      case GDSCColorTheme.yellow:
-        return GDSCTheme.yellow;
-      case GDSCColorTheme.green:
-        return GDSCTheme.green;
-      case GDSCColorTheme.blue:
-        return GDSCTheme.blue;
-    }
-  }
+  ThemeData get themeData => theme.getThemeData();
 
   /// Change the color theme
-  void setTheme(GDSCColorTheme color) {
-    _themeData = _getThemeData(color);
+  void setTheme(GDSCThemeColor color) {
+    theme = GDSCTheme(currentTheme: color);
     notifyListeners();
   }
 }

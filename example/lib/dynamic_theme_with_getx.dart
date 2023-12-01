@@ -8,19 +8,38 @@ void main() {
   runApp(const MyApp());
 }
 
+class ThemeController extends GetxController {
+  ThemeController({GDSCThemeColor defaultColor = GDSCThemeColor.blue}) {
+    theme = GDSCTheme(currentTheme: defaultColor);
+  }
+
+  late GDSCTheme theme;
+
+  ThemeData get themeData => theme.getThemeData();
+
+  /// Sets the current theme of the app.
+  set setTheme(GDSCThemeColor themeColor) {
+    theme = GDSCTheme(currentTheme: themeColor);
+    update();
+  }
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     // Bind the ThemeController
-
-    return GetMaterialApp(
-      title: 'Flutter Demo',
-      // Use GetX to reactively update the theme
-      theme: GDSCTheme.green,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+    return GetBuilder<ThemeController>(
+        init: ThemeController(),
+        builder: (themeController) {
+          return GetMaterialApp(
+            title: 'Flutter Demo',
+            // Use GetX to reactively update the theme
+            theme: themeController.themeData,
+            home: const MyHomePage(title: 'Flutter Demo Home Page'),
+          );
+        });
   }
 }
 
@@ -36,30 +55,20 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
+  final _themeController = Get.find<ThemeController>();
+
   void _incrementCounter() {
     setState(() {
       _counter++;
     });
   }
 
-  void _changeTheme(GDSCColorTheme themeColor) {
-    switch (themeColor) {
-      case GDSCColorTheme.red:
-        Get.changeTheme(GDSCTheme.red);
-        break;
-      case GDSCColorTheme.yellow:
-        Get.changeTheme(GDSCTheme.yellow);
-        break;
-      case GDSCColorTheme.green:
-        Get.changeTheme(GDSCTheme.green);
-        break;
-      case GDSCColorTheme.blue:
-        Get.changeTheme(GDSCTheme.blue);
-        break;
-    }
+  void _changeTheme(GDSCThemeColor themeColor) {
+    // Use GetX to update the theme
+    _themeController.setTheme = themeColor;
   }
 
-  void Function() _onPressThemeChanger(GDSCColorTheme colortheme) {
+  void Function() _onPressThemeChanger(GDSCThemeColor colortheme) {
     return () => _changeTheme(colortheme);
   }
 
@@ -67,7 +76,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
+        backgroundColor:
+            _themeController.theme.getThemeData().appBarTheme.backgroundColor,
         title: Text(widget.title),
       ),
       body: Center(
@@ -85,21 +95,21 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
-                    onPressed: _onPressThemeChanger(GDSCColorTheme.blue),
+                    onPressed: _onPressThemeChanger(GDSCThemeColor.blue),
                     icon:
                         const Icon(Icons.palette, color: GDSCPalette.blue500)),
                 IconButton(
-                    onPressed: _onPressThemeChanger(GDSCColorTheme.green),
+                    onPressed: _onPressThemeChanger(GDSCThemeColor.green),
                     icon:
                         const Icon(Icons.palette, color: GDSCPalette.green500)),
                 IconButton(
-                    onPressed: _onPressThemeChanger(GDSCColorTheme.red),
+                    onPressed: _onPressThemeChanger(GDSCThemeColor.red),
                     icon: const Icon(
                       Icons.palette,
                       color: GDSCPalette.red500,
                     )),
                 IconButton(
-                    onPressed: _onPressThemeChanger(GDSCColorTheme.yellow),
+                    onPressed: _onPressThemeChanger(GDSCThemeColor.yellow),
                     icon: const Icon(Icons.palette,
                         color: GDSCPalette.yellow800)),
               ],
@@ -110,6 +120,10 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
+        backgroundColor:
+            _themeController.theme.colors.button.primary.background.common,
+        foregroundColor:
+            _themeController.theme.colors.button.primary.label.common,
         child: const Icon(Icons.add),
       ),
     );

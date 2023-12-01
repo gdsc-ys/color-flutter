@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
-    create: (context) => GDSCThemeManager(defaultColor: GDSCColorTheme.green),
+    create: (context) => GDSCThemeManager(defaultColor: GDSCThemeColor.green),
     child: const DynamicThemeWithProviderExample(),
   ));
 }
@@ -43,16 +43,18 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void _changeTheme(GDSCColorTheme themeColor) {
+  void _changeTheme(GDSCThemeColor themeColor) {
     Provider.of<GDSCThemeManager>(context, listen: false).setTheme(themeColor);
   }
 
-  void Function() _onPressThemeChanger(GDSCColorTheme colortheme) {
+  void Function() _onPressThemeChanger(GDSCThemeColor colortheme) {
     return () => _changeTheme(colortheme);
   }
 
   @override
   Widget build(BuildContext context) {
+    final themeManager = Provider.of<GDSCThemeManager>(context);
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
@@ -73,21 +75,21 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
-                    onPressed: _onPressThemeChanger(GDSCColorTheme.blue),
+                    onPressed: _onPressThemeChanger(GDSCThemeColor.blue),
                     icon:
                         const Icon(Icons.palette, color: GDSCPalette.blue500)),
                 IconButton(
-                    onPressed: _onPressThemeChanger(GDSCColorTheme.green),
+                    onPressed: _onPressThemeChanger(GDSCThemeColor.green),
                     icon:
                         const Icon(Icons.palette, color: GDSCPalette.green500)),
                 IconButton(
-                    onPressed: _onPressThemeChanger(GDSCColorTheme.red),
+                    onPressed: _onPressThemeChanger(GDSCThemeColor.red),
                     icon: const Icon(
                       Icons.palette,
                       color: GDSCPalette.red500,
                     )),
                 IconButton(
-                    onPressed: _onPressThemeChanger(GDSCColorTheme.yellow),
+                    onPressed: _onPressThemeChanger(GDSCThemeColor.yellow),
                     icon: const Icon(Icons.palette,
                         color: GDSCPalette.yellow800)),
               ],
@@ -98,6 +100,9 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
+        backgroundColor:
+            themeManager.theme.colors.button.primary.background.common,
+        foregroundColor: themeManager.theme.colors.button.primary.label.common,
         child: const Icon(Icons.add),
       ),
     );
