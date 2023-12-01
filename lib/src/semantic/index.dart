@@ -31,7 +31,7 @@ class SemanticColors {
 }
 
 class GDSCSemanticColors {
-  final GDSCColorTheme currentTheme;
+  final GDSCThemeColor currentTheme;
   late SemanticColors currentColors;
 
   get colors => currentColors;
@@ -74,16 +74,16 @@ class GDSCSemanticColors {
 
   GDSCSemanticColors({required this.currentTheme}) {
     switch (currentTheme) {
-      case GDSCColorTheme.blue:
+      case GDSCThemeColor.blue:
         currentColors = blue;
         break;
-      case GDSCColorTheme.green:
+      case GDSCThemeColor.green:
         currentColors = green;
         break;
-      case GDSCColorTheme.yellow:
+      case GDSCThemeColor.yellow:
         currentColors = yellow;
         break;
-      case GDSCColorTheme.red:
+      case GDSCThemeColor.red:
         currentColors = red;
         break;
     }
