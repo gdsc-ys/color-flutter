@@ -16,7 +16,7 @@ or by adding this line to your dependencies and running `flutter pub get` in you
 
 ```
 dependencies:
-  gdsc_ys_color: ^0.0.1
+  gdsc_ys_color: ^1.0.0
 ```
 
 Now you can use it by importing `gdsc_ys_color.dart` in your dart file.
@@ -27,9 +27,9 @@ import 'package:gdsc_ys_color/gdsc_ys_color.dart';
 
 ## 👟 QuickStart
 
-You can use this package by importing `gdsc_ys_color.dart` and using `GDSCTheme` class.   
-When you create a new instance of `GDSCTheme`, you can specify which theme you want to use.   
-`GDSCColorTheme` enum contains all the themes available. (Currently blue, green, yellow, red are available.)   
+You can use this package by importing `gdsc_ys_color.dart` and using `GDSCTheme` class.  
+When you create a new instance of `GDSCTheme`, you can specify which theme you want to use.  
+`GDSCColorTheme` enum contains all the themes available. (Currently blue, green, yellow, red are available.)
 
 ```dart
 import 'package:flutter/material.dart';
@@ -74,8 +74,8 @@ ElevatedButton(
 ),
 ```
 
-Semantic colors are color tokens which named after what they represents.   
-`gdsc_ys_color` package provides semantic colors for following use cases.   
+Semantic colors are color tokens which named after what they represents.  
+`gdsc_ys_color` package provides semantic colors for following use cases.
 
 | Name       | Description                                     |
 | ---------- | ----------------------------------------------- |
@@ -88,16 +88,16 @@ Semantic colors are color tokens which named after what they represents.
 | tag        | Defines tag colors.                             |
 | tabBar     | Defines tab bar colors.                         |
 
-To use semantic colors, we recommend using `GDSCTheme` with state management packages like `GetX` or `Provider`.    
-You can use semantic colors by calling `theme.colors` and accessing the color you want to use.    
+To use semantic colors, we recommend using `GDSCTheme` with state management packages like `GetX` or `Provider`.  
+You can use semantic colors by calling `theme.colors` and accessing the color you want to use.
 
 ### 2. Using Themes 🎨
 
 #### 2.1 Usage with `GetX`
 
-When using `GetX`, you can use `GDSCTheme` class using `GetxController`.    
+When using `GetX`, you can use `GDSCTheme` class using `GetxController`.
 
-The example code below shows how to use `GDSCTheme` with `GetX`. Runnable example can be found in [example](./example/lib/dynamic_theme_with_getx.dart).    
+The example code below shows how to use `GDSCTheme` with `GetX`. Runnable example can be found in [example](./example/lib/dynamic_theme_with_getx.dart).
 
 ```dart
 import 'package:flutter/material.dart';
@@ -150,10 +150,10 @@ class MyHomePage extends StatelessWidget {
 
 #### 2.2 Usage with `Provider`
 
-When using `Provider`, you can use `GDSCTheme` class using `ChangeNotifier`.    
-The `ChangeNotifier` is already exported from `gdsc_ys_color.dart`. You can use it as `GDSCThemeManager`.    
+When using `Provider`, you can use `GDSCTheme` class using `ChangeNotifier`.  
+The `ChangeNotifier` is already exported from `gdsc_ys_color.dart`. You can use it as `GDSCThemeManager`.
 
-Example code below shows how to use `GDSCTheme` with `Provider`. Runnable example can be found in [example](./example/lib/dynamic_theme_with_provider.dart).    
+Example code below shows how to use `GDSCTheme` with `Provider`. Runnable example can be found in [example](./example/lib/dynamic_theme_with_provider.dart).
 
 ```dart
 import 'package:flutter/material.dart';
