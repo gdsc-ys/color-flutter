@@ -1,6 +1,6 @@
 name: gdsc_ys_color
 description: Color system for GDSC Yonsei & other chapters
-version: 1.0.0+1
+version: 1.0.0
 homepage: https://gdsc-ys.github.io/semantic-demo/
 repository: https://github.com/gdsc-ys/color-flutter
 
