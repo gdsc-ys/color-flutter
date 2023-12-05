@@ -5,7 +5,7 @@ homepage: https://gdsc-ys.github.io/semantic-demo/
 repository: https://github.com/gdsc-ys/color-flutter
 
 environment:
-  sdk: "^3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -15,6 +15,3 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-
-flutter:
-  uses-material-design: true
